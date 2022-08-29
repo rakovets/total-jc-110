@@ -18,7 +18,7 @@ public class Engine implements Runnable {
         String lastName = scanner.next();
         System.out.print("Enter user age: ");
         int age = scanner.nextInt();
-        group.addUser(Role.USER, new User(firstName, lastName, age));
+        group.addUser(this.role, new User(firstName, lastName, age));
         System.out.println("User added to group " + this.role);
     }
 
