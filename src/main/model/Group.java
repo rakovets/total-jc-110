@@ -3,6 +3,7 @@ package main.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Group {
     private final Collection<User> users;
@@ -40,10 +41,6 @@ public class Group {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (User user : users) {
-            sb.append(user);
-        }
-        return sb.toString();
+        return users.stream().map(String::valueOf).collect(Collectors.joining());
     }
 }

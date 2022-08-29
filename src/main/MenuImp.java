@@ -4,9 +4,7 @@ import main.model.Group;
 import main.model.Role;
 import main.model.User;
 
-import java.util.Collection;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class MenuImp implements Menu {
     private final Scanner scanner = new Scanner(System.in);
