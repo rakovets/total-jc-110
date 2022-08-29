@@ -13,20 +13,12 @@ public class MenuImp implements Menu {
 
     @Override
     public User createUser() {
-        System.out.println("First Name");
-        String firstName = scanner.nextLine();
-        System.out.println("Last Name");
-        String lastName = scanner.nextLine();
-        System.out.println("Age");
-        int age = scanner.nextInt();
-        return new User(firstName, lastName, age, Role.USER);
+        return new User(scanner.nextLine(), scanner.nextLine(), scanner.nextInt(), Role.USER);
     }
 
     @Override
     public Group createGroup() {
-        System.out.println("Group name");
-        String groupName = scanner.nextLine();
-        return new Group(groupName);
+        return new Group(scanner.next());
     }
 
     @Override
@@ -37,10 +29,7 @@ public class MenuImp implements Menu {
 
     @Override
     public String printGroup(Group group) {
-        Collection<User> users = group.getUsers();
-        return users.stream()
-                .map(String::valueOf)
-                .collect(Collectors.joining());
+        return group.toString();
     }
 
     @Override

@@ -42,7 +42,7 @@ public class Group {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (User user : users) {
-            sb.append(user.toString());
+            sb.append(user);
         }
         return sb.toString();
     }
